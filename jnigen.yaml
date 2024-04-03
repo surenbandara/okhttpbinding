@@ -1,0 +1,29 @@
+# Regenerate bindings with `dart run jnigen --config jnigen.yaml`.
+
+summarizer:
+  backend: asm
+
+android_sdk_config:
+  add_gradle_deps: true
+  android_example: '.'
+
+output:
+  c:
+    library_name: example
+    path: src/example/
+  dart:
+    path: 'lib/src/jni/jni_bindings.dart'
+    structure: single_file
+
+classes:
+  - 'okhttp3.OkHttpClient'
+  - 'okhttp3.Call'
+  - 'okhttp3.Callback'
+  - 'okhttp3.MediaType'
+  - 'okhttp3.OkHttpClient'
+  - 'okhttp3.Request'
+  - 'okhttp3.RequestBody'
+  - 'okhttp3.Response'
+
+enable_experiment:
+  - 'interface_implementation'

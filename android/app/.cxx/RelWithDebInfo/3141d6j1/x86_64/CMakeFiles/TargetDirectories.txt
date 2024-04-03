@@ -1,0 +1,3 @@
+F:/Fiverr_Order/jnigenokhttpexample/android/app/.cxx/RelWithDebInfo/3141d6j1/x86_64/CMakeFiles/example.dir
+F:/Fiverr_Order/jnigenokhttpexample/android/app/.cxx/RelWithDebInfo/3141d6j1/x86_64/CMakeFiles/edit_cache.dir
+F:/Fiverr_Order/jnigenokhttpexample/android/app/.cxx/RelWithDebInfo/3141d6j1/x86_64/CMakeFiles/rebuild_cache.dir
