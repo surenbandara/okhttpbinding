@@ -13,8 +13,6 @@ This project demonstrates how to use **JNI (Java Native Interface) bindings** to
 - [Usage](#usage)
   - [Key Functionalities](#key-functionalities)
   - [Code Overview](#code-overview)
-- [Screenshots](#screenshots)
-- [License](#license)
 - [Acknowledgments](#acknowledgments)
 
 ---
@@ -40,57 +38,60 @@ Ensure you have the following installed:
 ### Installation
 
 1. **Clone the repository**:
-   ```bash
+   ```shell
    git clone https://github.com/your-username/flutter-jni-okhttp.git
    cd flutter-jni-okhttp
+   ```
 
-Install dependencies:
-bash
-Copy code
+2. **Install dependencies**:
+```shell
 flutter pub get
-Configure JNI Bindings: Ensure the jni_bindings.dart file is properly set up to bind with the OkHttp library.
-Running the Application
+```
+
+3. **Configure JNI Bindings**:
+   Ensure the jni_bindings.dart file is properly set up to bind with the OkHttp library.
+
+### Running the Application
 To run the app on an emulator or a connected device:
 
-bash
-Copy code
+```shell
 flutter run
-If you encounter issues:
+```
+
+#### If you encounter issues:
 
 Ensure that your Android emulator is running or your physical device is connected.
 Run the following command if there are Android SDK issues:
-bash
-Copy code
+```shell
 flutter doctor --android-licenses
-Usage
-Enter a URL:
-Type a valid HTTP URL (e.g., https://jsonplaceholder.typicode.com/todos/1) into the text field.
+```
 
-Send Request:
+## Usage
+1. **Enter a URL**:
+Type a valid HTTP URL (e.g., `https://jsonplaceholder.typicode.com/todos/1`) into the text field.
+
+2. **Send Request**:
 Press the Send Request button (the floating action button) to send the HTTP request.
 
-View Response:
-The server’s response will be displayed below the text field. If the URL is invalid, "Invalid url" will be shown.
+3. **View Response**:
+The server’s response will be displayed below the text field. If the URL is invalid, `"Invalid url"` will be shown.
 
-Key Functionalities
+### Key Functionalities
 Below are the core JNI-based functionalities used:
 
-OkHttpClient: Creates a new HTTP client for managing requests.
-Request_Builder: Constructs an HTTP request using the provided URL.
-url1(JString.fromString(url)): Sets the request URL using a JString wrapper.
-build(): Builds the HTTP request.
-Sending the Request:
-java
-Copy code
-okHttpClient.newCall(request).execute(): Sends the request and returns the response.
-Error Handling:
-If an invalid URL is provided, the app catches the exception and displays "Invalid url".
+1. `OkHttpClient`: Creates a new HTTP client for managing requests.
+2. `Request_Builder`: Constructs an HTTP request using the provided URL.
+  - `url1(JString.fromString(url))`: Sets the request URL using a JString wrapper.
+  - `build()`: Builds the HTTP request.
+3. **Sending the Request**:
+  - `okHttpClient.newCall(request).execute()`: Sends the request and returns the response.
+4.  **Error Handling**:
+If an invalid URL is provided, the app catches the exception and displays `"Invalid url"`.
 
-Code Overview
+### Code Overview
 Below is the key Dart code used to build the HTTP request with JNI bindings and display the response:
 
-dart
-Copy code
+```shell
 void _sendRequest(String url) {
   setState(() {
     try {
@@ -108,20 +109,11 @@ void _sendRequest(String url) {
     }
   });
 }
-Screenshots
-Enter URL	View Response
-Note: Add your screenshots to the /screenshots folder to ensure they display properly.	
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+```
 
-Acknowledgments
-OkHttp: A popular Java HTTP client.
-Flutter: For building cross-platform mobile applications.
-JNI Documentation: For interfacing with native Java code.
-Issues and Contributions
-Feel free to open issues or submit pull requests to improve the project. Contributions are always welcome!
+## Acknowledgments
 
-css
-Copy code
+- **OkHttp**: A popular Java HTTP client that simplifies making HTTP requests.
+- **Flutter**: A framework for building cross-platform mobile applications efficiently.
+- **JNI Documentation**: Provides guidelines for interfacing with native Java code through the Java Native Interface (JNI).
 
-Feel free to replace the placeholder links and information with your actual content.
