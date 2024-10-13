@@ -39,7 +39,7 @@ Ensure you have the following installed:
 
 1. **Clone the repository**:
    ```shell
-   git clone [https://github.com/your-username/flutter-jni-okhttp.git](https://github.com/surenbandara/okhttpbinding.git)
+   git clone https://github.com/surenbandara/okhttpbinding.git
    cd flutter-jni-okhttp
    ```
 
